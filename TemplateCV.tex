@@ -1,0 +1,122 @@
+%%%%%%%%%%%%%%%%%
+% Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%%%%%%%%%%%%%%%%
+
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+\documentclass[8pt,a4paper,ragged2e]{altacv}
+
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+\ifxetexorluatex
+  
+  \setmainfont{Lato}
+\else
+  
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+	\usepackage{ragged2e}
+	\usepackage{nomencl}
+	\usepackage{makeidx}
+\fi
+
+\definecolor{Mulberry}{HTML}{72243D}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Sepia}
+\colorlet{accent}{Mulberry}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+\name{name}
+\tagline{job}
+%\photo{2.8cm}{namepicture}
+\personalinfo{%
+  
+  \email{email}
+  \phone{phone number}
+  \mailaddress{your address, Brazil}
+  \homepage{Skype:}
+  \twitter{@urtwitter}
+  \linkedin{linkedin.com/in/ur}
+  \github{github.com/ur}
+}
+
+
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+\cvsection[p1sidebar]{Professional Experience}
+
+\cvevent{job}{company}{Aug 0000 -- Dec 0000}{São Paulo, SP}
+\begin{itemize}
+\item job description 1
+\item job description 2
+\end{itemize}
+
+\divider
+
+\cvevent{job}{company}{Aug 0000 -- Dec 0000}{São Paulo, SP}
+\begin{itemize}
+\item job description 1
+\item job description 2
+\end{itemize}
+
+\medskip
+
+\cvsection{Projects}
+
+\cvevent{Title}{Funding agency/Institution / University}{Aug 0000 -- July 0000}{}
+\begin{itemize}
+\item Short Description
+\end{itemize}
+
+\divider
+
+\cvevent{Title}{Funding agency/Institution / University}{Aug 0000 -- July 0000}{}
+\begin{itemize}
+\item Short Description
+\end{itemize}
+
+\medskip
+
+\cvsection{Education}
+
+\cvevent{B.Sc.\ in Statistics}{University}{Mar 0000 -- at present}{}
+
+\divider
+
+\cvevent{M.Sc.\ in Mathematical Physics}{University}{Mar 0000 -- Feb 0000}{}
+Dissertation title
+
+
+\medskip
+
+\newpage
+
+\cvsection[p2sidebar]{Salary Requirements}
+
+\begin{itemize}
+\item  
+\item 
+\end{itemize}
+
+\cvsection{Referees}
+
+% \cvref{name}{email}{mailing address}
+\cvref{Prof.\ Dr }{IME/USP}{email}
+{University \\ Institution \\ São Paulo, SP}
+
+\divider
+
+\cvref{Prof.\ Dr }{IME/USP}{email}
+{University \\ Institution \\ São Paulo, SP}
+
+\end{document}
